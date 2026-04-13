@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stoks', function (Blueprint $table) {
+        Schema::create('t_stok', function (Blueprint $table) {
             $table->id('stok_id');
             $table->foreignId('supplier_id')->constrained('m_supplier', 'supplier_id');
             $table->foreignId('barang_id')->constrained('m_barang', 'barang_id');
             $table->foreignId('user_id')->constrained('m_user', 'user_id');
-            $table->datetimes();
+            $table->dateTime('stok_tanggal');
             $table->integer('stok_jumlah');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('stoks');
+        Schema::dropIfExists('t_stok');
     }
 };
