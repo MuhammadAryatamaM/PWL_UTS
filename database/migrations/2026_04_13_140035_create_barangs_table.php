@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('kategori_id')->constrained('m_kategori', 'kategori_id');
             $table->string('barang_kode', 10);
             $table->string('barang_nama', 100);
-            $table->integer('barang_kode');
-            $table->integer('barang_nama');
+            $table->integer('harga_beli');
+            $table->integer('harga_jual');
             $table->timestamps();
         });
     }
