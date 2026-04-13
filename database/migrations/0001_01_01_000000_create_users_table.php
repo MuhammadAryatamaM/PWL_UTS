@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+        Schema::create('m_user', function (Blueprint $table) {
+            $table->id('user_id');
+            $table->foreignId('level_id')->constrained('m_level', 'level_id');
+            $table->string('username', 20)->unique();
+            $table->string('nama', 100);
+            $table->string('password', 255);
             $table->rememberToken();
             $table->timestamps();
         });
@@ -42,7 +42,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('m_user');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }
