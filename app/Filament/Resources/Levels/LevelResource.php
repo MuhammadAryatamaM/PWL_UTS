@@ -22,6 +22,10 @@ class LevelResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'level_nama';
 
+    protected static ?string $modelLabel = 'Level';
+
+    protected static ?string $pluralModelLabel = 'Level';
+
     public static function form(Schema $schema): Schema
     {
         return LevelForm::configure($schema);
