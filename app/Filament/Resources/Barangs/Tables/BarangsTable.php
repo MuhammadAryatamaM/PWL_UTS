@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Barangs\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 class BarangsTable
@@ -13,7 +14,28 @@ class BarangsTable
     {
         return $table
             ->columns([
-                //
+            TextColumn::make('kategori.kategori_nama')
+                ->label('Kategori')
+                ->searchable()
+                ->sortable(),
+
+            TextColumn::make('barang_kode')
+                ->label('Kode Barang')
+                ->searchable(),
+
+            TextColumn::make('barang_nama')
+                ->label('Nama Barang')
+                ->searchable(),
+
+            TextColumn::make('harga_beli')
+                ->label('Harga Beli')
+                ->money('IDR')
+                ->sortable(),
+
+            TextColumn::make('harga_jual')
+                ->label('Harga Jual')
+                ->money('IDR')
+                ->sortable(),
             ])
             ->filters([
                 //
