@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'level_id' => 1, 
             'username' => 'admin',
             'nama' => 'Super Admin',
-            'password' => Hash::make('password123'),
+            'password' => 'password123',
         ]);
     }
 }

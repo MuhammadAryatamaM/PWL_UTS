@@ -29,6 +29,13 @@ class User extends Authenticatable implements FilamentUser, HasName
         'remember_token',
     ];
 
+    protected function casts(): array
+    {
+        return [
+            'password' => 'hashed',
+        ];
+    }
+
     public function canAccessPanel(Panel $panel): bool
     {
         return true;
