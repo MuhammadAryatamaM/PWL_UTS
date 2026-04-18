@@ -20,8 +20,6 @@ class StokResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ArrowDownTray;
 
-    protected static ?string $recordTitleAttribute = 'stok_id';
-
     protected static ?string $modelLabel = 'Restok';
 
     protected static ?string $pluralModelLabel = 'Restok';

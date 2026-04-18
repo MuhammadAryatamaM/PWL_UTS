@@ -20,8 +20,6 @@ class PenjualanDetailResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::ClipboardDocumentList;
 
-    protected static ?string $recordTitleAttribute = 'detail_id';
-
     protected static ?string $modelLabel = 'Detail Penjualan';
 
     protected static ?string $pluralModelLabel = 'Detail Penjualan';
