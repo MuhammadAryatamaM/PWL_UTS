@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Levels\Schemas;
 
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
 class LevelForm
@@ -10,7 +11,15 @@ class LevelForm
     {
         return $schema
             ->components([
-                //
+                TextInput::make('level_kode')
+                    ->label('Kode')
+                    ->required()
+                    ->unique(ignoreRecord: true)
+                    ->maxLength(10),
+                TextInput::make('level_nama')
+                    ->label('Nama')
+                    ->required()
+                    ->maxLength(100),
             ]);
     }
 }
