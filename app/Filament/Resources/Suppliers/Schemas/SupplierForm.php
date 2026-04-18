@@ -12,8 +12,12 @@ class SupplierForm
     {
         return $schema
             ->components([
-                TextInput::make('supplier_kode')->required(),
-                TextInput::make('supplier_nama')->required(),
+                TextInput::make('supplier_kode')
+                    ->label('Kode Supplier')
+                    ->required(),
+                TextInput::make('supplier_nama')
+                    ->label('Nama Supplier')
+                    ->required(),
                 Textarea::make('supplier_alamat')
                     ->label('Alamat')
                     ->required()
