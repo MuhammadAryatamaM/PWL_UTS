@@ -18,13 +18,15 @@ class SupplierResource extends Resource
 {
     protected static ?string $model = Supplier::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Truck;
 
     protected static ?string $recordTitleAttribute = 'supplier_nama';
 
     protected static ?string $modelLabel = 'Supplier';
 
     protected static ?string $pluralModelLabel = 'Supplier';
+
+    protected static ?int $navigationSort = 3;
 
     public static function form(Schema $schema): Schema
     {

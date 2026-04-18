@@ -18,13 +18,15 @@ class PenjualanDetailResource extends Resource
 {
     protected static ?string $model = PenjualanDetail::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::ClipboardDocumentList;
 
     protected static ?string $recordTitleAttribute = 'detail_id';
 
     protected static ?string $modelLabel = 'Detail Penjualan';
 
     protected static ?string $pluralModelLabel = 'Detail Penjualan';
+
+    protected static ?int $navigationSort = 5;
 
     public static function form(Schema $schema): Schema
     {
